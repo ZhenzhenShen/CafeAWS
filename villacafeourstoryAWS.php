@@ -1,8 +1,8 @@
 <?php
 $host = 'securecipher.cg3i8aewd36j.ap-southeast-2.rds.amazonaws.com';
 $dbname = 'cafe-Schema';
-$user = 'admin';
-$password = 'brian20181031';
+$user = '******';
+$password = '*****';
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
