@@ -1,0 +1,359 @@
+#header .logo {
+    width: 100px;
+    height: 100px;
+}
+
+#header .shopname {
+    color: white; /* 设置字体颜色为白色 */
+    font-size: 70px; /* 设置字体大小为 24 像素，您可以根据需要调整 */
+    font-family:'Courier New', Courier, monospace;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 20px;
+    background: #B71041;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    margin-right: auto;
+    height: 80px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the end (right side) */
+    margin-left: auto; /* Push the navbar to the right */
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color:rgb(150, 212, 43);
+    font-weight: bold;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: rgb(150, 212, 43);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    height: 450px; /* 设置容器高度 */
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideImg{
+    height: 450px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+*/
+
+.text-overlay {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.dish_name{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.menu{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 1px;
+}
+
+.button{  
+    width: 150px;
+    border-radius: 4px;
+    display: center;
+    background-color: white;
+    border: 2px solid #B71041 ;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 15px;
+    cursor: pointer;
+    font-weight: bold;  
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    text-decoration: none;
+}
+
+.menu a.button{
+    text-decoration:none;
+}
+
+.button:hover{
+    background-color: #B71041;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:active,.button.selected{
+    background-color: #B71041;
+    color: white;
+}
+
+
+.menucontainer{
+    display: none;
+}
+
+.menucontainer.active{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 60px;
+    justify-content: space-evenly;
+    margin-top: 2px;
+}
+
+.eachdish {
+    text-align: center;
+    padding:10px;
+    border: 2px solid rgba(150, 212, 43,0.2);
+}
+
+.eachdish img {
+    width: 300px;
+    height: 300px;
+}
+
+.dishname {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.dishprice {
+    color: #B71041; /* 设置价格颜色，可以根据需要修改 */
+    margin-top: 5px;
+}
+
+.dishdescription {
+    margin-top: 5px;
+}
+
+.toppicture{
+    height: 200px;
+}
+
+.toppicture {
+    width: 100%; /* 设置容器宽度 */
+    height: 350px; /* 设置容器高度 */
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+
+.toppicture img,.slideImg {
+    width: 100%; /* 使图像充满容器宽度 */
+    height: 100%; /* 使图像充满容器高度 */
+    object-fit: cover; /* 保持图像比例并填充整个容器 */
+}
+
+.toppicture a.button{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 20px;
+    width: 400px;
+    text-decoration: none;
+}
+
+.contactmain {
+    display: flex; /* 使用弹性盒子布局 */
+    justify-content: space-between; /* 在两侧对齐 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+#map {
+    width: 50%; /* 占据一半宽度 */
+    padding: 20px;
+}
+
+#contactdetails {
+    width: 50%; /* 占据四成宽度 */
+    padding: 30px; /* 添加一些内边距 */
+}
+
+.heading1{
+    color: #B71041;
+    font-size: 30px;
+}
+
+
+  #reviewmain {
+    display: flex;
+    font-size: 16px; /* 默认字体大小 */
+    line-height: 1.5; /* 默认行高，这里设置为字体大小的1.5倍 */
+    margin: 40px;
+  }
+  
+  #showreview {
+    width: 60%;
+  }
+
+  #showreview ul{
+    width: 80%;
+    text-decoration: none;
+  }
+  
+  #leavereview {
+    width: 40%;
+  }
+
+.review-section {
+    margin-bottom: 15px; /* 设置各部分的底部间距 */
+    font-size: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 20px; /* 设置标签的字体大小 */
+    margin-bottom: 5px; /* 设置标签和输入框之间的底部间距 */
+    color: #B71041;
+    font-weight: bold;
+}
+
+input {
+    width: 350px; /* 设置输入框的宽度 */
+    height: 40px; /* 设置输入框的高度 */
+    padding: 8px; /* 设置输入框的内边距，增加可读性 */
+    font-size: 16px; /* 设置输入框的字体大小 */
+    border: 1px solid #B71041; /* 设置边框样式，可选 */
+    border-radius: 5px; /* 设置边框圆角，可选 */
+}
+
+#reviewbox, textarea{
+    width: 350px; /* 设置输入框的宽度 */
+    height: 300px; /* 设置输入框的高度 */
+    padding: 8px; /* 设置输入框的内边距，增加可读性 */
+    font-size: 16px; /* 设置输入框的字体大小 */
+    border: 1px solid #B71041; /* 设置边框样式，可选 */
+    border-radius: 5px; /* 设置边框圆角，可选 */
+}
+
+#ourstory,
+#businesshour {
+    width: 80%;
+    margin: 0 auto; /* Center the sections horizontally */
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+.containercenteraalign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+.review-section {
+    margin-bottom: 15px;
+}
+
+/* Add additional styling as needed */
+
+.btn-green{
+  background-color: green;
+  width: 80px;
+  height: 20px;
+}
+
+.btn-red{
+    background-color: #B71041;
+    width: 80px;
+    height: 20px;
+}
+
